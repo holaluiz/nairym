@@ -318,6 +318,9 @@ if (/[?&]static\b/.test(location.search)) $$('.rv').forEach(el => el.classList.a
 /* deep links: /#redes, /#logotipo… land on the chapter once images have settled */
 if (location.hash.length > 1) addEventListener('load', () => {
   const el = document.getElementById(location.hash.slice(1));
-  if (el && el.closest('#book')) setTimeout(() => NS.go ? NS.go(el.getBoundingClientRect().top + scrollY) : el.scrollIntoView(), 60);
+  if (!el || !el.closest('#book')) return;
+  const land = () => NS.go ? NS.go(el.getBoundingClientRect().top + scrollY) : el.scrollIntoView();
+  // lazy gallery images grow the page after load: land, then land again once the layout has settled
+  setTimeout(land, 60); setTimeout(land, 1200);
 });
 })();
