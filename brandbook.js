@@ -131,13 +131,16 @@ $('.filters').addEventListener('click', e => {
 
 /* ================= 05 MOCKUPS ================= */
 const MOCKS = [
+  ['identidad','Sistema de identidad','Tarjeta, estudio, cuaderno de formación, certificado y neceser con la firma.'],
+  ['emblema-dorado','Emblema dorado','El isotipo en relieve metálico sobre una superficie verde oliva.'],
   ['tarjetas','Tarjetas de presentación','Frente marfil con firma horizontal en verde oliva; reverso verde con isotipo marfil.'],
   ['papeleria','Papel membretado','Hoja membretada con firma horizontal, sobre y carpeta verde.'],
   ['certificado','Certificado de curso','Certificado demostrativo; el nombre entre corchetes es un marcador.'],
   ['material-didactico','Cuaderno y material didáctico','Cuaderno con isotipo marfil y portada del material de Manicura Rusa.'],
   ['empaque','Empaque y frascos','Caja rígida marfil y frascos con etiqueta de la firma vertical.'],
-  ['uniforme','Uniforme profesional','Isotipo marfil aplicado al pecho (simulación de bordado).'],
-  ['pared','Señalética del estudio','Firma en relieve sobre muro marfil.']
+  ['pared','Señalética del estudio','Firma en relieve sobre muro marfil.'],
+  ['insignia','Uniforme con insignia','Isotipo dorado en el pecho y detalle lila en la manga.'],
+  ['uniforme','Uniforme profesional','Isotipo marfil aplicado al pecho (simulación de bordado).']
 ];
 $('.mocks').innerHTML = MOCKS.map(([f, t, d], i) => `<figure class="rv"><button type="button" data-i="${i}" aria-label="Ver ${t}"><img src="${K}mockups/nairym-mockup-${f}-web.jpg" alt="${t}" loading="lazy"></button><figcaption><b>${t}</b><span>${d}</span></figcaption></figure>`).join('');
 const ELEMS = [['patron-isotipo','Patrón'],['isotipo-contorno','Isotipo contorno'],['flow-linea-superior','Línea flow superior'],['flow-linea-inferior','Línea flow inferior'],['marco-flow','Marco flow'],['mascara-flow','Máscara flow']];

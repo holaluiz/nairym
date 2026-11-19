@@ -170,14 +170,25 @@ body.rm .rv{opacity:1;transform:none}
 /* mockups */
 .mocks{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
 .mocks figure{margin:0;grid-column:span 2}
-.mocks figure:nth-child(1),.mocks figure:nth-child(2){grid-column:span 3}
+.mocks figure:nth-child(1),.mocks figure:nth-child(2),.mocks figure:nth-child(9),.mocks figure:nth-child(10){grid-column:span 3}
+/* wallpapers */
+.walls{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,.8fr);gap:clamp(18px,3vw,40px);align-items:end}
+@media (max-width:819px){.walls{grid-template-columns:1fr}}
+.walls figure{margin:0}
+.wl-desk{border-radius:16px;padding:10px 10px 0;background:#1B2112;box-shadow:0 30px 70px rgba(40,50,28,.22)}
+.wl-desk img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px 8px 0 0}
+.wl-desk::after{content:"";display:block;height:14px;margin:0 -10px;border-radius:0 0 16px 16px;background:linear-gradient(#2a3220,#1B2112)}
+.wl-phone{max-width:280px;margin:0 auto;border-radius:36px;padding:9px;background:#1B2112;box-shadow:0 30px 70px rgba(40,50,28,.22)}
+.wl-phone img{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:28px}
+.walls figcaption{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding-top:16px;font-size:14px}
+.walls figcaption small{color:#6B7059}
 .mocks button{display:block;width:100%;border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:#1d2414}
 .mocks img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s cubic-bezier(.33,1,.68,1)}
 .mocks button:hover img{transform:scale(1.04)}
 .mocks figcaption{padding:14px 2px 0}
 .mocks figcaption b{display:block;font-family:var(--serif);font-weight:500;font-size:22px}
 .mocks figcaption span{display:block;font-size:13.5px;color:#C9CDB9;line-height:1.5;margin-top:4px}
-@media (max-width:899px){.mocks{grid-template-columns:1fr 1fr}.mocks figure,.mocks figure:nth-child(1),.mocks figure:nth-child(2){grid-column:span 1}.mocks figure:nth-child(1){grid-column:span 2}}
+@media (max-width:899px){.mocks{grid-template-columns:1fr 1fr}.mocks figure,.mocks figure:nth-child(1),.mocks figure:nth-child(2),.mocks figure:nth-child(9),.mocks figure:nth-child(10){grid-column:span 1}.mocks figure:nth-child(1){grid-column:span 2}}
 .elems{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
 @media (max-width:899px){.elems{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .elems a{display:flex;flex-direction:column;gap:10px;font-size:12.5px;color:#C9CDB9}

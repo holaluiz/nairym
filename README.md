@@ -23,7 +23,8 @@ Também funciona em qualquer hospedagem estática (GitHub Pages, Netlify, Vercel
    - Color: paleta com HEX, RGB e CMYK (clique copia o HEX).
    - Tipografía: Cormorant Garamond, Manrope e Sora, probador ao vivo e hierarquia.
    - Fotografía: direção de arte e galeria com filtros e lightbox.
-   - Aplicaciones: 7 mockups e elementos gráficos.
+   - Aplicaciones: 10 mockups e elementos gráficos.
+   - Fondos de pantalla para celular e computador.
    - Redes: perfil de Instagram com feed, gerador de posts (5 plantillas, exporta PNG) e reels.
    - Descargas: brand kit completo e ZIPs por categoria.
 6. **Firma**: fechamento com o logo.
