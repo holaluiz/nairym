@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 629.333" width="1040" height="629.333" role="img" aria-labelledby="t d">
+<title id="t">Línea Flow inferior</title>
+<desc id="d">Borde inferior del trazo del isotipo como línea abierta.</desc>
+<path fill="none" stroke="#48552C" stroke-width="6" stroke-linecap="round" d="M20 471.648C29.031 468.572 42.464 450.732 48.549 442.656C53.998 435.424 60.388 429.003 65.707 421.624C77.83 404.806 88.228 386.82 99.277 369.319C147.265 293.316 191.865 207.932 283.192 178.075C311.279 168.892 344.282 166.411 373.523 173.318C553.396 215.803 565.777 459.059 691.225 566.734C785.359 647.532 924.55 607.091 976.501 498.487"/>
+</svg>

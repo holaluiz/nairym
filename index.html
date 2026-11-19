@@ -1,0 +1,934 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nairym Sosa — Identidad</title>
+<meta name="description" content="Presentación de la identidad visual de Nairym Sosa, Máster Nail Artist: natural en su esencia, precisa en su técnica, fluida en su evolución.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Manrope:wght@200..800&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brandbook.css">
+<style>
+:root{
+  --marfil:#F5F1E8;--beige:#E7DFD0;--arena:#D4C6B3;--grafito:#262820;
+  --oliva:#48552C;--profundo:#28321C;--musgo:#65734B;--salvia:#A8B396;
+  --lila:#B69AE8;--lila-lum:#D3C1FF;--violeta:#7860AD;
+  --bg:var(--marfil);--ink:var(--profundo);--muted:#8B9472;--dark:#232B18;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --accent:"Sora",system-ui,sans-serif;
+  --u:1px;--n:1;--hfs:120px;--ic:66px;--pfs:56px;--sfs:64px;--mfs:80px;--camw:280px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:auto;background:var(--bg)}
+html.end{background:var(--dark)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;overflow-x:clip;-webkit-font-smoothing:antialiased}
+a,button{color:inherit;text-decoration:none;font:inherit}
+button{background:none;border:0;cursor:pointer;padding:0}
+:focus-visible{outline:2px solid var(--violeta);outline-offset:3px;border-radius:4px}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;height:calc(var(--n)*86px);padding:0 calc(var(--n)*40px);display:flex;align-items:center;justify-content:space-between;pointer-events:none}
+.nav>*{pointer-events:auto}
+.logo{display:block;width:calc(var(--n)*64px);color:var(--oliva);opacity:0;transition:color .4s}
+.logo svg{display:block;width:100%;height:auto}
+.links{display:flex;gap:calc(var(--n)*30px);font-size:calc(var(--n)*14px);font-weight:400;letter-spacing:.01em}
+.links a{color:var(--muted);opacity:0;display:inline-block;transition:color .3s;position:relative}
+.links a.cur,.links a:hover{color:var(--ink)}
+.links a.cur::after{content:"";position:absolute;left:50%;bottom:-8px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--lila)}
+.cta{display:inline-flex;align-items:center;gap:calc(var(--n)*9px);height:calc(var(--n)*42px);padding:0 calc(var(--n)*16px) 0 calc(var(--n)*20px);border-radius:999px;background:var(--profundo);color:var(--marfil);font-size:calc(var(--n)*14px);font-weight:500;letter-spacing:.01em;clip-path:inset(0 0 0 100% round 999px);transition:background .3s,color .3s;white-space:nowrap}
+.cta:hover{background:var(--oliva)}
+.cta svg,.btn2 svg{width:1.1em;height:1.1em}
+body.dark-nav .logo{color:var(--marfil)}
+body.dark-nav .links a{color:#9DA58A}
+body.dark-nav .links a.cur,body.dark-nav .links a:hover{color:var(--marfil)}
+body.dark-nav .cta{background:var(--marfil);color:var(--profundo)}
+@media (max-width:819px){.links{display:none}}
+
+/* ---------- story ---------- */
+#story{position:relative;height:2000vh}
+.hero{position:absolute;top:0;left:0;width:100%;height:100vh;z-index:9;pointer-events:none;will-change:transform;overflow:hidden}
+.hl{position:absolute;left:0;top:40%;width:100%;height:0;font-family:var(--serif);font-size:var(--hfs);font-weight:500;letter-spacing:-.012em;line-height:1;color:var(--ink);margin:0}
+.word{position:absolute;top:-.55em;left:0;white-space:pre;line-height:1.1}
+.word .ch{display:inline-block;clip-path:inset(0 100% 0 0)}
+.word.glide,.icon.glide{transition:left .5s cubic-bezier(.25,.75,.2,1)}
+.icon{position:absolute;top:calc(var(--ic)*-.5);left:0;width:var(--ic);height:var(--ic);opacity:0}
+.icon svg{display:block;width:100%;height:100%}
+.eyebrow{position:absolute;left:0;width:100%;top:calc(var(--hfs)*.72);text-align:center;font-family:var(--accent);font-weight:200;font-size:max(12px,calc(var(--hfs)*.13));letter-spacing:.42em;text-transform:uppercase;color:var(--musgo);opacity:0;padding-left:.42em}
+.flyer{position:absolute;left:0;top:0;width:calc(var(--u)*86);aspect-ratio:1.697;opacity:0;color:var(--oliva);will-change:transform}
+.flyer svg{display:block;width:100%;height:100%}
+
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--bg)}
+.proc{position:absolute;left:0;right:0;top:19%;z-index:4;text-align:center;padding:0 16px;opacity:0;visibility:hidden}
+body.mob .proc{top:16%}
+.proc h2{margin:0;font-family:var(--serif);font-size:var(--pfs);font-weight:500;line-height:1.08;letter-spacing:-.012em;color:var(--ink)}
+.pw{display:inline-block}
+.g{color:var(--muted);font-style:italic;font-weight:400}
+.chip{display:inline-block;width:1.15em;height:.86em;border-radius:999px;vertical-align:-.1em;margin:0 .16em;background-size:cover;background-position:center 60%;box-shadow:0 .06em .2em rgba(40,50,28,.22),0 0 0 .035em rgba(182,154,232,.65)}
+.sub{font-size:max(14px,calc(var(--pfs)*.27));font-weight:400;color:#5E6450;margin:calc(var(--pfs)*.42) 0 0;letter-spacing:.005em}
+.btn2{display:inline-flex;align-items:center;gap:.5em;height:max(40px,calc(var(--pfs)*.64));font-size:max(13px,calc(var(--pfs)*.24));padding:0 1.15em 0 1.35em;border-radius:999px;margin-top:calc(var(--pfs)*.38);background:var(--profundo);color:var(--marfil);font-weight:500;transition:background .3s}
+.btn2:hover{background:var(--oliva)}
+
+.cards{position:absolute;inset:0;z-index:2;pointer-events:none}
+.card{position:absolute;left:0;top:0;width:calc(var(--cw)*1px);height:calc(var(--cw)*1.32px);margin:calc(var(--cw)*-.66px) 0 0 calc(var(--cw)*-.5px);border-radius:calc(var(--cw)*.09px);background-size:cover;background-position:center;background-color:var(--beige);box-shadow:0 calc(var(--cw)*.04px) calc(var(--cw)*.12px) rgba(40,50,28,.2),inset 0 0 0 1px rgba(245,241,232,.4);will-change:transform,opacity}
+
+/* film panel */
+.sky{position:absolute;inset:0;z-index:6;visibility:hidden;overflow:hidden;background:var(--profundo)}
+.skyimg{position:absolute;inset:0;will-change:transform}
+.film{position:absolute;left:-4%;top:-4%;width:108%;height:108%;object-fit:cover;opacity:0}
+.veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,35,19,.62) 0%,rgba(28,35,19,.08) 34%,rgba(28,35,19,.04) 58%,rgba(28,35,19,.66) 100%)}
+.iso{position:absolute;left:0;top:0;width:var(--camw);aspect-ratio:1.697;color:var(--marfil);transform-origin:89% 19%}
+.iso svg{display:block;width:100%;height:100%;overflow:visible}
+.pil{position:absolute;inset:0;pointer-events:none}
+.pl-tl{position:absolute;left:calc(var(--n)*40px);top:calc(var(--n)*108px);color:var(--marfil)}
+.pl-lab{display:block;font-family:var(--accent);font-weight:300;font-size:max(11px,calc(var(--sfs)*.2));letter-spacing:.32em;text-transform:uppercase;color:var(--lila-lum);margin-bottom:.9em;opacity:0}
+.pl-title{margin:0;font-family:var(--serif);font-style:italic;font-weight:400;font-size:var(--sfs);line-height:1;letter-spacing:-.01em}
+.pl-title span{display:inline-block;opacity:0}
+.pl-body{position:absolute;right:calc(var(--n)*40px);bottom:calc(var(--n)*48px);max-width:min(30ch,80vw);margin:0;color:var(--marfil);font-size:max(14px,calc(var(--sfs)*.25));line-height:1.55;font-weight:400;text-align:right;opacity:0}
+.pind{position:absolute;left:calc(var(--n)*40px);bottom:calc(var(--n)*48px);display:flex;gap:10px;z-index:2}
+.pind button{display:flex;align-items:center;gap:8px;padding:8px 14px 8px 10px;border-radius:999px;color:rgba(245,241,232,.7);font-family:var(--accent);font-weight:300;font-size:12px;letter-spacing:.14em;text-transform:uppercase;background:rgba(40,50,28,.35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(245,241,232,.16);transition:color .3s,border-color .3s,background .3s}
+.pind button i{width:6px;height:6px;border-radius:50%;background:rgba(245,241,232,.5);transition:background .3s,box-shadow .3s}
+.pind button.on{color:var(--marfil);border-color:rgba(211,193,255,.55)}
+.pind button.on i{background:var(--lila-lum);box-shadow:0 0 10px var(--lila)}
+body.mob .pl-tl{left:16px;top:84px}
+body.mob .pl-body{right:16px;left:16px;bottom:84px;max-width:none;text-align:left}
+body.mob .pind{left:16px;bottom:28px;gap:6px}
+body.mob .pind button{padding:7px 10px 7px 8px;font-size:10px;letter-spacing:.08em}
+.black{position:absolute;inset:0;z-index:8;background:var(--dark);opacity:0;pointer-events:none}
+
+/* ---------- manifesto ---------- */
+#manifiesto{position:relative;height:950vh;background:var(--dark)}
+.mstage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--dark)}
+.track{position:absolute;left:0;top:50%;display:flex;align-items:center;gap:calc(var(--mfs)*.3);white-space:nowrap;font-family:var(--serif);font-size:var(--mfs);font-weight:500;letter-spacing:-.012em;line-height:1.1;color:var(--marfil);will-change:transform}
+.mi{flex:0 0 auto;position:relative}
+.mw{display:inline-block}
+.mc{display:inline-block;opacity:0;transform:translateY(.55em) rotate(14deg);transform-origin:0 100%;transition:opacity .5s cubic-bezier(.33,1,.68,1),transform .5s cubic-bezier(.33,1,.68,1)}
+.in .mc{opacity:1;transform:none}
+.mg{color:var(--salvia);font-style:italic;font-weight:400}
+.intro{font-size:.72em;display:flex;flex-direction:column;gap:.18em}
+.lab{display:inline-block;position:relative;padding:.3em .66em .32em;border-radius:999px;color:var(--profundo);font-family:var(--accent);font-weight:300;font-style:normal;font-size:.3em;letter-spacing:.02em;line-height:1.1;box-shadow:0 .12em .34em rgba(0,0,0,.35)}
+.lab.s{font-size:.2em;padding:.36em .8em}
+.intro .lab.s{font-size:.2778em;position:absolute}
+.lab small{display:block;font-size:.62em;opacity:.75;letter-spacing:.08em;margin-top:.2em}
+.pop{opacity:0;transform:rotate(-14deg) scale(0);transition:transform .5s cubic-bezier(.3,1.42,.6,1) .12s,opacity .18s linear .12s}
+.in .pop,.pop.in{opacity:1;transform:rotate(var(--r,0deg)) scale(1)}
+.photo{border-radius:50%;aspect-ratio:1;background-size:cover;background-position:center;box-shadow:0 .08em .3em rgba(0,0,0,.4),0 0 0 .03em rgba(245,241,232,.25)}
+.isoobj{color:var(--marfil);filter:drop-shadow(0 0 .12em rgba(211,193,255,.55))}
+.isoobj svg{display:block;width:100%;height:auto}
+.spark{width:.34em;height:.34em;display:block;filter:drop-shadow(0 0 .08em rgba(211,193,255,.9))}
+.ratio{width:3.6em;font-family:var(--accent);font-weight:300;font-style:normal}
+.ratio .bar{display:flex;height:.44em;border-radius:999px;overflow:hidden;box-shadow:0 0 0 1px rgba(245,241,232,.35),0 .1em .3em rgba(0,0,0,.35)}
+.ratio .bar i{display:block}
+.ratio .rl{display:flex;justify-content:space-between;font-size:.17em;letter-spacing:.08em;color:var(--salvia);margin-top:.9em;text-transform:uppercase}
+.spacer{width:30vw;height:1px}
+
+/* ---------- cierre ---------- */
+#cierre{position:relative;height:100vh;height:100svh;overflow:hidden;background:var(--dark);color:var(--marfil);display:grid;place-items:center;text-align:center}
+#cierre video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42}
+#cierre .cv{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(35,43,24,.35),rgba(35,43,24,.92) 75%)}
+.cw{position:relative;padding:0 24px;max-width:900px}
+.cw img{width:min(560px,78vw);height:auto;display:block;margin:0 auto}
+.tag{font-family:var(--accent);font-weight:200;font-size:clamp(14px,1.5vw,20px);letter-spacing:.06em;line-height:1.7;margin:2.6em 0 0;color:var(--beige)}
+.dots{display:flex;justify-content:center;gap:10px;margin-top:2.2em}
+.dots i{height:8px;border-radius:999px;box-shadow:0 0 0 1px rgba(245,241,232,.25)}
+.note{margin:1.6em 0 0;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#9DA58A;font-family:var(--accent);font-weight:300}
+.cw>*{opacity:0;transform:translateY(18px);transition:opacity 1s cubic-bezier(.33,1,.68,1),transform 1s cubic-bezier(.33,1,.68,1)}
+#cierre.in .cw>*{opacity:1;transform:none}
+#cierre.in .cw>*:nth-child(2){transition-delay:.25s}
+#cierre.in .cw>*:nth-child(3){transition-delay:.45s}
+#cierre.in .cw>*:nth-child(4){transition-delay:.6s}
+
+/* ---------- reduced motion ---------- */
+body.rm #story{height:auto}
+body.rm .stage{position:relative}
+body.rm #manifiesto{height:auto}
+body.rm .mstage{position:relative;height:auto;padding:16vh 6vw}
+body.rm .track{position:relative;top:0;flex-wrap:wrap;white-space:normal;transform:none!important;row-gap:.3em}
+body.rm .cw>*{opacity:1;transform:none;transition:none}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="iso" viewBox="0 0 1000 589.333"><path fill="currentColor" d="M0 451.648C9.031 448.572 22.464 430.732 28.549 422.656C33.998 415.424 40.388 409.003 45.707 401.624C57.83 384.806 68.228 366.82 79.277 349.319C127.265 273.316 171.865 187.932 263.192 158.075C291.279 148.892 324.282 146.411 353.523 153.318C533.396 195.803 545.777 439.059 671.225 546.734C765.359 627.532 904.55 587.091 956.501 478.487C961.625 467.775 969.364 440.441 952.089 435.52C948.438 434.479 912.037 452.281 892.643 452.712C830.834 454.084 776.671 415.037 740.751 367.208C652.227 249.336 616.977 94.479 469.917 29.308C446.523 18.941 419.714 14.132 394.271 14.126C301.744 14.102 229.557 65.809 178.268 140.08C157.279 170.473 141.305 203.497 124.004 235.952C108.025 265.927 91.992 296.044 76.752 326.454C61.133 357.619 42.687 387.062 23.477 416.116C17.783 424.728 0.417 442.629 0 451.648ZM797.229 348.778C802.351 336.01 796.585 317.498 797.425 303.535C799.565 267.976 810.611 230.477 836.474 204.628C882.691 158.435 956.179 179.867 989.585 112.874C1026.735 38.37 958.409 -22.723 882.099 8.214C796.285 43.003 780.057 175.812 780.739 255.608C780.885 272.844 787.294 337.272 797.229 348.778Z"/></symbol>
+</svg>
+
+<nav class="nav" aria-label="Principal">
+  <a class="logo" href="#top" data-go="top" aria-label="Nairym Sosa — inicio"><svg viewBox="0 0 1000 589.333" aria-hidden="true"><use href="#iso"/></svg></a>
+  <div class="links">
+    <a href="#top" data-go="top" class="cur">Inicio</a>
+    <a href="#pilares" data-go="pilares">Pilares</a>
+    <a href="#manifiesto" data-go="manifiesto">Manifiesto</a>
+    <a href="#sistema" data-go="sistema">Brand book</a>
+    <a href="#redes" data-go="redes">Redes</a>
+  </div>
+  <a class="cta" href="#descargas" data-go="descargas">Brand kit
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+  </a>
+</nav>
+
+<section id="story">
+  <header class="hero" id="top">
+    <h1 class="hl" aria-label="Nairym Sosa, Máster Nail Artist">
+      <span class="word" aria-hidden="true"></span>
+      <span class="icons" aria-hidden="true"></span>
+      <span class="eyebrow" aria-hidden="true">Máster Nail Artist</span>
+    </h1>
+    <div class="flyer" aria-hidden="true"><svg viewBox="0 0 1000 589.333"><use href="#iso"/></svg></div>
+  </header>
+
+  <div class="stage">
+    <div class="proc" id="esencia">
+      <h2>
+        <span class="pw">Natural</span><span class="pw chip" role="img" aria-label="Uñas verde oliva"></span><span class="pw g">en su</span> <span class="pw">esencia,</span><br>
+        <span class="pw">precisa</span> <span class="pw g">en su</span> <span class="pw">técnica</span>
+      </h2>
+      <p class="sub">Fluida en su evolución. Una identidad que crece con ella.</p>
+      <a class="btn2" href="#pilares" data-go="pilares">Conocer los tres pilares
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+    <div class="cards" aria-hidden="true"></div>
+    <div class="sky" id="pilares" aria-label="Los tres pilares de la identidad">
+      <div class="skyimg">
+        <video class="film" muted loop playsinline preload="metadata" poster="assets/film/nairym-film01-essence-poster.jpg" data-src="assets/film/esencia.mp4" aria-hidden="true"></video>
+        <video class="film" muted loop playsinline preload="metadata" poster="assets/film/nairym-film02-precision-poster.jpg" data-src="assets/film/precision.mp4" aria-hidden="true"></video>
+        <video class="film" muted loop playsinline preload="metadata" poster="assets/film/nairym-film03-flow-poster.jpg" data-src="assets/film/fluidez.mp4" aria-hidden="true"></video>
+      </div>
+      <div class="veil"></div>
+      <div class="iso" aria-hidden="true"><svg viewBox="0 0 1000 589.333"><use href="#iso"/></svg></div>
+      <div class="pil"><div class="pl-tl"><span class="pl-lab">01 / Esencia</span><h3 class="pl-title"><span>Naturalidad</span></h3></div>
+        <p class="pl-body">El verde es la expresión principal de su personalidad: conexión con la naturaleza, ligereza, autenticidad y equilibrio.</p></div>
+      <div class="pil"><div class="pl-tl"><span class="pl-lab">02 / Conocimiento</span><h3 class="pl-title"><span>Tecnología</span></h3></div>
+        <p class="pl-body">El lila representa la precisión, el conocimiento y la innovación: una luz discreta que potencia el talento humano.</p></div>
+      <div class="pil"><div class="pl-tl"><span class="pl-lab">03 / Transformación</span><h3 class="pl-title"><span>Fluidez</span></h3></div>
+        <p class="pl-body">Formas orgánicas y curvas continuas: versatilidad, libertad creativa y la capacidad de evolucionar sin perder la esencia.</p></div>
+      <div class="pind" role="group" aria-label="Pilares">
+        <button type="button" data-pil="0"><i></i>Esencia</button>
+        <button type="button" data-pil="1"><i></i>Técnica</button>
+        <button type="button" data-pil="2"><i></i>Fluidez</button>
+      </div>
+    </div>
+    <div class="black"></div>
+  </div>
+</section>
+
+<section id="manifiesto" aria-label="Manifiesto">
+  <div class="mstage">
+    <div class="track"></div>
+  </div>
+</section>
+
+<div id="book">
+
+<section class="bk" id="sistema" data-chapter="Inicio">
+  <div class="bk-in">
+    <div class="bk-head">
+      <div class="rv"><span class="bk-num">Brand book</span><h2>Sistema <em>de marca</em></h2></div>
+      <div class="rv"><p class="bk-lead">Todo lo necesario para aplicar la identidad con coherencia: logotipo, color, tipografía, fotografía, aplicaciones y redes sociales. Cada archivo está listo para descargar.</p>
+        <span class="status"><i></i>Propuesta para aprobación</span></div>
+    </div>
+    <nav class="idx rv" aria-label="Capítulos del brand book">
+      <a href="#logotipo" data-go="logotipo"><b>01</b><span>Logotipo<small>Versiones, colores y descargas SVG / PNG</small></span></a>
+      <a href="#color" data-go="color"><b>02</b><span>Color<small>Paleta 60 / 30 / 10 con HEX, RGB y CMYK</small></span></a>
+      <a href="#tipografia" data-go="tipografia"><b>03</b><span>Tipografía<small>Tres familias, jerarquía y probador</small></span></a>
+      <a href="#fotografia" data-go="fotografia"><b>04</b><span>Fotografía<small>Dirección de arte y galería</small></span></a>
+      <a href="#aplicaciones" data-go="aplicaciones"><b>05</b><span>Aplicaciones<small>Mockups y elementos gráficos</small></span></a>
+      <a href="#redes" data-go="redes"><b>06</b><span>Redes sociales<small>Feed, plantillas y reels</small></span></a>
+      <a href="#descargas" data-go="descargas"><b>07</b><span>Descargas<small>Brand kit completo por categoría</small></span></a>
+      <a href="#cierre" data-go="cierre"><b>08</b><span>Firma<small>La identidad en una línea</small></span></a>
+    </nav>
+  </div>
+</section>
+
+<section class="bk" id="logotipo" data-chapter="Logotipo">
+  <div class="bk-in">
+    <div class="bk-head">
+      <div class="rv"><span class="bk-num">01 / Logotipo</span><h2>Una curva <em>que termina en gota</em></h2></div>
+      <p class="bk-lead rv">El isotipo es un trazo continuo que fluye y se transforma; la gota es el detalle de precisión. Elige la versión, el color y el fondo, y descarga el archivo exacto que necesitas.</p>
+    </div>
+    <div class="lab-wrap rv">
+      <div class="lv-stage"><img alt=""><span class="lv-file"></span><span class="lv-warn">Contraste insuficiente: usa otro fondo</span></div>
+      <div class="lv-panel">
+        <div><span class="ctl-l">Versión</span><div class="seg lv-kinds"></div></div>
+        <div><span class="ctl-l">Color</span><div class="sw-row lv-colors"></div></div>
+        <div><span class="ctl-l">Fondo de prueba</span><div class="seg lv-bgs"></div></div>
+        <p class="lv-desc"></p>
+        <div class="lv-dl"><span class="ctl-l">Descargar</span><div class="dls lv-dls"></div></div>
+      </div>
+    </div>
+    <div class="bk-sub wrong-wrap">
+      <h3 class="rv">Usos incorrectos</h3>
+      <div class="wrong"></div>
+    </div>
+  </div>
+</section>
+
+<section class="bk dark" id="color" data-chapter="Color">
+  <div class="bk-in">
+    <div class="bk-head">
+      <div class="rv"><span class="bk-num">02 / Color</span><h2>60 · 30 · <em>10</em></h2></div>
+      <p class="bk-lead rv">Una identidad predominantemente natural, equilibrada por neutros y enriquecida por pequeños momentos de luz lila. Toca cualquier color para copiar su código.</p>
+    </div>
+    <div class="ratio-big rv"></div>
+    <div class="cgroups"></div>
+    <p class="cnote"></p>
+    <div class="dls rv" style="margin-top:32px">
+      <a class="dl solid" href="assets/kit/colors/nairym-paleta.pdf" download><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg>Paleta <small>PDF</small></a>
+      <a class="dl" href="assets/kit/colors/nairym-paleta.png" download><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg>PNG</a>
+      <a class="dl" href="assets/kit/colors/nairym-paleta.svg" download><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg>SVG</a>
+      <a class="dl" href="assets/kit/colors/nairym-colores.css" download><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg>Variables <small>CSS</small></a>
+    </div>
+  </div>
+</section>
+
+<section class="bk" id="tipografia" data-chapter="Tipografía">
+  <div class="bk-in">
+    <div class="bk-head">
+      <div class="rv"><span class="bk-num">03 / Tipografía</span><h2>Tres voces, <em>una sola marca</em></h2></div>
+      <p class="bk-lead rv">Una serif con trazo orgánico para los títulos, una sans clara para leer y una geométrica ligera para frases y datos. Las tres son libres (SIL Open Font License).</p>
+    </div>
+    <div class="specs">
+      <article class="spec rv" style="font-family:'Cormorant Garamond',serif">
+        <span class="role">Títulos</span><span class="aa">Aa</span><span class="fam">Cormorant Garamond</span>
+        <span class="glyphs">ABCDEFGHIJKLMNÑOPQRSTUVWXYZ abcdefghijklmnñopqrstuvwxyz 0123456789 <i>áéíóú</i></span>
+        <div class="wts"><span>Light 300</span><span>Regular 400</span><span>Medium 500</span><span>SemiBold 600</span><span>Bold 700</span><span>Itálica</span></div>
+        <p class="use">Solo títulos y frases destacadas. Elegancia editorial con un trazo que recuerda la curva del isotipo.</p>
+      </article>
+      <article class="spec rv" style="font-family:Manrope,sans-serif">
+        <span class="role">Textos e interfaz</span><span class="aa" style="font-weight:300">Aa</span><span class="fam" style="font-weight:500">Manrope</span>
+        <span class="glyphs">ABCDEFGHIJKLMNÑOPQRSTUVWXYZ abcdefghijklmnñopqrstuvwxyz 0123456789</span>
+        <div class="wts"><span>ExtraLight 200</span><span>Light 300</span><span>Regular 400</span><span>Medium 500</span><span>SemiBold 600</span><span>Bold 700</span></div>
+        <p class="use">Textos corridos, interfaz, publicaciones y material didáctico. Clara, cercana y contemporánea.</p>
+      </article>
+      <article class="spec rv" style="font-family:Sora,sans-serif">
+        <span class="role">Frases, citas y datos</span><span class="aa" style="font-weight:200">Aa</span><span class="fam" style="font-weight:300">Sora</span>
+        <span class="glyphs" style="font-weight:200;letter-spacing:.06em">ABCDEFGHIJKLMNÑOPQRSTUVWXYZ abcdefghijklmnñopqrstuvwxyz 0123456789</span>
+        <div class="wts"><span>Thin 100</span><span>ExtraLight 200 · recomendado</span><span>Light 300</span><span>Regular 400</span></div>
+        <p class="use">Énfasis, citas, etiquetas y datos técnicos, en ExtraLight y con espaciado amplio.</p>
+      </article>
+    </div>
+    <div class="tester rv">
+      <div class="t-ctl">
+        <label>Familia <select id="t-fam"><option value="cormorant">Cormorant Garamond</option><option value="manrope">Manrope</option><option value="sora">Sora</option></select></label>
+        <label>Peso <input id="t-w" type="range" step="100"><output id="t-wo"></output></label>
+        <label>Tamaño <input id="t-s" type="range" min="18" max="140" value="72"><output id="t-so"></output></label>
+        <label><input id="t-i" type="checkbox"> Itálica</label>
+      </div>
+      <div class="t-out" contenteditable="true" spellcheck="false" aria-label="Escribe para probar la tipografía">Natural en su esencia. Precisa en su técnica.</div>
+    </div>
+    <div class="hier rv">
+      <div class="h-l"><span class="k">Jerarquía en uso</span>
+        <p class="x1">Manicura Rusa</p><p class="x2">Máster Nail Artist</p>
+        <p class="x3">La preparación de la uña natural define la duración y el acabado. Cada paso tiene un porqué, y entenderlo es lo que convierte la técnica en excelencia.</p></div>
+      <div class="h-r"><span class="k">Escala</span>
+        <ul>
+          <li><code>Display · 72–96</code><span style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:500;line-height:1">Título</span></li>
+          <li><code>Título · 36–48</code><span style="font-family:'Cormorant Garamond',serif;font-size:28px;font-style:italic">Subtítulo en itálica</span></li>
+          <li><code>Etiqueta · 12–14</code><span style="font-family:Sora,sans-serif;font-weight:200;font-size:13px;letter-spacing:.3em">MÁSTER NAIL ARTIST</span></li>
+          <li><code>Texto · 15–18</code><span style="font-size:16px">Texto de lectura en Manrope Regular.</span></li>
+        </ul></div>
+    </div>
+    <div class="dls rv" style="margin-top:32px">
+      <a class="dl solid" href="assets/kit/downloads/nairym-typography.zip" download><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg>Fuentes <small>ZIP · 776 KB</small></a>
+      <a class="dl" href="assets/kit/typography/nairym-guia-tipografica.pdf" download><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg>Guía tipográfica <small>PDF</small></a>
+    </div>
+  </div>
+</section>
+
+<section class="bk alt" id="fotografia" data-chapter="Fotografía">
+  <div class="bk-in">
+    <div class="bk-head">
+      <div class="rv"><span class="bk-num">04 / Fotografía</span><h2>Luz suave, <em>materia real</em></h2></div>
+      <p class="bk-lead rv">La fotografía cuenta la marca antes que cualquier texto: manos cuidadas, texturas naturales y el estudio como escenario. Toca una imagen para verla en grande.</p>
+    </div>
+    <div class="princ rv">
+      <div><b>Luz cálida</b><p>Natural o cálida, lateral y difusa. Sombras suaves, nunca duras.</p></div>
+      <div><b>Texturas orgánicas</b><p>Seda, lino, piedra y hojas: materiales que dan tacto a la imagen.</p></div>
+      <div><b>Verde como atmósfera</b><p>El verde envuelve la escena; el resto respira en tonos neutros.</p></div>
+      <div><b>Lila como luz</b><p>El lila aparece solo como reflejo o brillo técnico, nunca como fondo.</p></div>
+    </div>
+    <div class="filters seg rv">
+      <button type="button" class="on" data-f="todo">Todo</button><button type="button" data-f="atmosfera">Atmósfera</button><button type="button" data-f="trabajo">Trabajo</button><button type="button" data-f="nairym">Nairym y aula</button>
+    </div>
+    <div class="gallery rv"></div>
+    <div class="dls rv" style="margin-top:20px">
+      <a class="dl solid" href="assets/kit/downloads/nairym-photography.zip" download><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg>Fotografía de marca <small>ZIP · 3.8 MB</small></a>
+    </div>
+  </div>
+</section>
+
+<section class="bk dark" id="aplicaciones" data-chapter="Aplicaciones">
+  <div class="bk-in">
+    <div class="bk-head">
+      <div class="rv"><span class="bk-num">05 / Aplicaciones</span><h2>La marca <em>en el mundo real</em></h2></div>
+      <p class="bk-lead rv">Papelería, certificados, material de curso, empaque, uniforme y estudio. La firma vectorial oficial se aplica sobre cada pieza, nunca generada por IA.</p>
+    </div>
+    <div class="mocks"></div>
+    <div class="bk-sub">
+      <h3 class="rv">Elementos gráficos</h3>
+      <div class="elems rv"></div>
+    </div>
+    <div class="dls rv" style="margin-top:32px">
+      <a class="dl solid" href="assets/kit/downloads/nairym-mockups.zip" download><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg>Mockups <small>ZIP · 5.2 MB</small></a>
+      <a class="dl" href="assets/kit/downloads/nairym-elements.zip" download><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg>Elementos gráficos <small>ZIP</small></a>
+    </div>
+  </div>
+</section>
+
+<section class="bk" id="redes" data-chapter="Redes">
+  <div class="bk-in">
+    <div class="bk-head">
+      <div class="rv"><span class="bk-num">06 / Redes sociales</span><h2>Un feed <em>con identidad</em></h2></div>
+      <p class="bk-lead rv">Alterna trabajos, frases, series educativas y anuncios de cursos. Toca una publicación del feed para editarla: cambia el texto o la foto y descarga el PNG listo para Instagram.</p>
+    </div>
+    <div class="social">
+      <div class="phone rv" aria-label="Vista previa del perfil de Instagram">
+        <div class="ig-top"><img src="assets/kit/logos/avatar/nairym-avatar-verde.png" alt="Avatar de Nairym Sosa"><div><div class="nm">Nairym Sosa</div><div class="rl">Máster Nail Artist</div></div></div>
+        <div class="ig-bio">Natural en su esencia. Precisa en su técnica.<br>Fluida en su evolución. <i>Cursos · Studio</i></div>
+        <div class="ig-hl">
+          <div><span><svg viewBox="0 0 1000 589.333"><use href="#iso"/></svg></span>Cursos</div>
+          <div><span><svg viewBox="0 0 20 20" fill="#D3C1FF" style="width:22px;height:22px"><path d="M10 0c.8 5.6 3.6 8.6 10 10-6.4 1.4-9.2 4.4-10 10-.8-5.6-3.6-8.6-10-10 6.4-1.4 9.2-4.4 10-10z"/></svg></span>Trabajos</div>
+          <div><span><svg viewBox="0 0 1000 589.333"><use href="#iso"/></svg></span>Técnica</div>
+          <div><span><svg viewBox="0 0 20 20" fill="#F5F1E8" style="width:20px;height:20px"><circle cx="10" cy="10" r="6"/></svg></span>Studio</div>
+        </div>
+        <div class="ig-grid"></div>
+      </div>
+      <div class="gen rv">
+        <div class="gen-prev"><canvas id="gen-canvas" aria-label="Vista previa de la publicación"></canvas></div>
+        <div class="gen-f">
+          <label><span class="ctl-l">Plantilla</span><select id="g-tpl"></select></label>
+          <label><span class="ctl-l">Fotografía</span><select id="g-photo"></select></label>
+          <label><span class="ctl-l">Título</span><textarea id="g-title" rows="2"></textarea></label>
+          <label><span class="ctl-l">Texto secundario</span><input id="g-sub"></label>
+          <p class="hint">Los textos entre corchetes son marcadores: reemplázalos antes de publicar.</p>
+          <button type="button" class="dl solid" id="g-dl"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg>Descargar PNG</button>
+        </div>
+      </div>
+    </div>
+    <div class="bk-sub">
+      <h3 class="rv">Reels y portadas en movimiento</h3>
+      <div class="reels">
+        <figure class="rv"><video muted loop playsinline preload="none" poster="assets/kit/motion/nairym-reels-intro-9x16-poster.png" src="assets/kit/motion/nairym-reels-intro-9x16.mp4"></video><figcaption>Intro de reels<a href="assets/kit/motion/nairym-reels-intro-9x16.mp4" download>MP4</a></figcaption></figure>
+        <figure class="rv"><video muted loop playsinline preload="none" poster="assets/kit/motion/nairym-serie-explica-9x16-poster.png" src="assets/kit/motion/nairym-serie-explica-9x16.mp4"></video><figcaption>Serie · Explica<a href="assets/kit/motion/nairym-serie-explica-9x16.mp4" download>MP4</a></figcaption></figure>
+        <figure class="rv"><video muted loop playsinline preload="none" poster="assets/kit/motion/nairym-serie-construye-9x16-poster.png" src="assets/kit/motion/nairym-serie-construye-9x16.mp4"></video><figcaption>Serie · Construye<a href="assets/kit/motion/nairym-serie-construye-9x16.mp4" download>MP4</a></figcaption></figure>
+        <figure class="rv"><video muted loop playsinline preload="none" poster="assets/kit/motion/nairym-serie-corrige-9x16-poster.png" src="assets/kit/motion/nairym-serie-corrige-9x16.mp4"></video><figcaption>Serie · Corrige<a href="assets/kit/motion/nairym-serie-corrige-9x16.mp4" download>MP4</a></figcaption></figure>
+        <figure class="rv"><video muted loop playsinline preload="none" poster="assets/kit/motion/nairym-serie-demuestra-9x16-poster.png" src="assets/kit/motion/nairym-serie-demuestra-9x16.mp4"></video><figcaption>Serie · Demuestra<a href="assets/kit/motion/nairym-serie-demuestra-9x16.mp4" download>MP4</a></figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bk dark" id="descargas" data-chapter="Descargas">
+  <div class="bk-in">
+    <div class="bk-head">
+      <div class="rv"><span class="bk-num">07 / Descargas</span><h2>Brand kit</h2></div>
+      <p class="bk-lead rv">Todos los archivos, organizados por categoría. Los logotipos incluyen SVG y PNG transparente en cinco colores; el manual reúne las reglas de uso.</p>
+    </div>
+    <div class="dgrid">
+      <a class="dcard big rv" href="assets/kit/downloads/nairym-brand-kit-completo.zip" download><b>Brand kit completo</b><span>Logos, color, tipografía, elementos, fotografía, mockups, motion y guías en un solo archivo.</span><em>ZIP · 22 MB<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg></em></a>
+      <a class="dcard big rv" href="assets/kit/guidelines/nairym-brand-guidelines.pdf" download><b>Manual de marca</b><span>Concepto, logotipo, color, tipografía, fotografía y aplicaciones, con las reglas de uso.</span><em>PDF · 2 MB<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg></em></a>
+      <a class="dcard rv" href="assets/kit/downloads/nairym-logos.zip" download><b>Logotipos</b><span>Horizontal, vertical, isotipo, nombre y avatar. SVG y PNG 1x · 2x · 4x.</span><em>ZIP · 1.9 MB<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg></em></a>
+      <a class="dcard rv" href="assets/kit/downloads/nairym-colors.zip" download><b>Color</b><span>Paleta en PDF, PNG y SVG, variables CSS y JSON.</span><em>ZIP · 280 KB<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg></em></a>
+      <a class="dcard rv" href="assets/kit/downloads/nairym-typography.zip" download><b>Tipografía</b><span>Cormorant Garamond, Manrope y Sora con sus licencias.</span><em>ZIP · 776 KB<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg></em></a>
+      <a class="dcard rv" href="assets/kit/downloads/nairym-elements.zip" download><b>Elementos gráficos</b><span>Gota, contorno, líneas flow, marco, máscara y patrón.</span><em>ZIP · 356 KB<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg></em></a>
+      <a class="dcard rv" href="assets/kit/downloads/nairym-photography.zip" download><b>Fotografía</b><span>Imágenes de atmósfera de marca en alta resolución.</span><em>ZIP · 3.8 MB<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg></em></a>
+      <a class="dcard rv" href="assets/kit/downloads/nairym-mockups.zip" download><b>Mockups</b><span>Siete aplicaciones con la firma vectorial aplicada.</span><em>ZIP · 5.2 MB<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg></em></a>
+      <a class="dcard rv" href="assets/kit/downloads/nairym-motion.zip" download><b>Motion</b><span>Revelación del logo, intro de reels, portadas de series y cierres.</span><em>ZIP · 7.3 MB<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg></em></a>
+      <a class="dcard rv" href="assets/kit/guidelines/nairym-guia-rapida.pdf" download><b>Guía rápida</b><span>Una página con lo esencial para aplicar la marca.</span><em>PDF · 168 KB<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg></em></a>
+    </div>
+  </div>
+</section>
+
+<section id="cierre" aria-label="Firma" data-chapter="Firma">
+  <video muted loop playsinline preload="none" poster="assets/film/nairym-film05-world-poster.jpg" data-src="assets/film/mundo.mp4" aria-hidden="true"></video>
+  <div class="cv"></div>
+  <div class="cw">
+    <img src="assets/brand/nairym-logo-horizontal-marfil.svg" alt="Nairym Sosa — Máster Nail Artist">
+    <p class="tag">Natural en su esencia. Precisa en su técnica. Fluida en su evolución.</p>
+    <div class="dots" aria-label="Proporción de color 60 / 30 / 10"><i style="width:96px;background:#48552C"></i><i style="width:48px;background:#E7DFD0"></i><i style="width:16px;background:#B69AE8"></i></div>
+    <p class="note">Identidad visual · propuesta para aprobación</p>
+  </div>
+</section>
+</div>
+
+<nav class="chbar" aria-label="Capítulos">
+  <a href="#logotipo" data-go="logotipo"><b>01</b>Logotipo</a><a href="#color" data-go="color"><b>02</b>Color</a><a href="#tipografia" data-go="tipografia"><b>03</b>Tipografía</a><a href="#fotografia" data-go="fotografia"><b>04</b>Fotografía</a><a href="#aplicaciones" data-go="aplicaciones"><b>05</b>Aplicaciones</a><a href="#redes" data-go="redes"><b>06</b>Redes</a><a href="#descargas" data-go="descargas"><b>07</b>Descargas</a>
+</nav>
+<div class="lbx" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+  <img alt="">
+  <button type="button" class="lb-x" aria-label="Cerrar"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9"/></svg></button>
+  <button type="button" class="lb-p" aria-label="Anterior"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3 5 8l5 5"/></svg></button>
+  <button type="button" class="lb-n" aria-label="Siguiente"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l5 5-5 5"/></svg></button>
+  <div class="lb-cap"></div>
+</div>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="brandbook.js" defer></script>
+
+<script>
+(() => {
+'use strict';
+const PH = n => `assets/photos/${n}.jpg`;
+
+/* ---------- helpers ---------- */
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const lerp = (a, b, t) => a + (b - a) * t;
+const eOut = t => 1 - Math.pow(1 - t, 3);
+const eInOut = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+const backOut = (t, s = 1.15) => { const c = s + 1, x = t - 1; return 1 + c * x * x * x + s * x * x; };
+function bez(x1, y1, x2, y2) {
+  const cx = 3 * x1, bx = 3 * (x2 - x1) - cx, ax = 1 - cx - bx, cy = 3 * y1, by = 3 * (y2 - y1) - cy, ay = 1 - cy - by;
+  const X = t => ((ax * t + bx) * t + cx) * t, Y = t => ((ay * t + by) * t + cy) * t, D = t => (3 * ax * t + 2 * bx) * t + cx;
+  return x => { if (x <= 0) return 0; if (x >= 1) return 1; let t = x;
+    for (let i = 0; i < 8; i++) { const d = X(t) - x; if (Math.abs(d) < 1e-5) break; const s = D(t); if (Math.abs(s) < 1e-6) break; t -= d / s; }
+    return Y(clamp(t)); };
+}
+const eGlide = bez(.25, .75, .2, 1);
+const kf = (w, dt) => 1 - Math.pow(1 - w, dt / 16.67);
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (RM) document.body.classList.add('rm');
+const root = document.documentElement;
+
+/* ---------- scroll map (fractions of the story) ---------- */
+const R = {
+  scatter: [.004, .07], procIn: [.04, .06], procReveal: .062,
+  pile: [.16, .24], wheel: [.24, .32], turn: [.32, .44], panelGate: .44,
+  panel: [.48, .56], x1: [.65, .67], x2: [.76, .78], yaw: [.56, .88], zoom: [.88, .97],
+  jump: {esencia: .1, pilares: .6, pil: [.6, .705, .82]}
+};
+
+/* ---------- elements ---------- */
+const story = $('#story'), hero = $('.hero'), hl = $('.hl'), wordEl = $('.word'), iconsEl = $('.icons'), flyer = $('.flyer'), eyebrow = $('.eyebrow');
+const stage = $('.stage'), proc = $('.proc'), procWords = $$('.proc .pw'), sub = $('.sub'), btn2 = $('.btn2');
+const cardsEl = $('.cards'), sky = $('.sky'), skyimg = $('.skyimg'), films = $$('.film'), iso = $('.iso'), black = $('.black');
+const pils = $$('.pil'), pind = $$('.pind button');
+const man = $('#manifiesto'), mstage = $('.mstage'), track = $('.track'), cierre = $('#cierre');
+const logo = $('.logo'), links = $$('.links a'), cta = $('.cta');
+const book = $('#book'), chbar = $('.chbar'), chLinks = $$('.chbar a'), bookSecs = $$('#book > section');
+const NS = window.NS = {locked: false};
+
+$('.chip').style.backgroundImage = `url("${PH('olive-nails')}")`;
+if (!RM) films.forEach(v => { v.src = v.dataset.src; });
+
+/* ---------- pixel icons ---------- */
+const PAL = {k: '#28321C', g: '#65734B', s: '#A8B396', l: '#B69AE8', w: '#F5F1E8', n: '#E9C9B6', o: '#C9A45C'};
+const ICONS = [
+  ['....k....','...kgk...','...kgk...','..kgggk..','.kggwggk.','.kgwgggk.','.kgggggk.','..kgggk..','...kkk...'], // gota
+  ['......kkk','....kksgk','...ksggk.','..ksggsk.','.kgsgggk.','.ksggkk..','.kgkk....','.kk......','k........'], // hoja
+  ['...kkk...','..knnnk..','.knnlnnk.','.knlnnnk.','.knlnnnk.','.knnnnnk.','.knnnnnk.','.kkkkkkk.','.........'], // uña
+  ['........k','.......ks','......ksk','.....ksk.','....kwk..','...kok...','..kllk...','.klllk...','.kkk.....'], // pincel
+  ['.........','..kkkkk..','.kwwwwwk.','kwwwwwwwk','kwkkkkkwk','kwlllllwk','kkkkkkkkk','.l.l.l.l.','.........'], // lámpara
+  ['...klk...','..klllk..','...kok...','..koook..','.ko...ok.','.ko...ok.','.ko...ok.','..koook..','...kkk...'], // anillo
+  ['....l....','....l....','...lwl...','.llwwwll.','...lwl...','....l....','....l....','..l...l..','.........']  // destello
+];
+const pix = rows => { let r = ''; rows.forEach((row, y) => [...row].forEach((c, x) => { if (PAL[c]) r += `<rect x="${x}" y="${y}" width="1.02" height="1.02" fill="${PAL[c]}"/>`; }));
+  return `<svg viewBox="0 0 9 9" shape-rendering="crispEdges">${r}</svg>`; };
+const icons = ICONS.map(rows => { const d = document.createElement('div'); d.className = 'icon'; d.innerHTML = pix(rows); iconsEl.appendChild(d); return d; });
+
+/* ---------- headline letters + morph schedule ---------- */
+const WORD = 'Nairym Sosa';
+const chars = [...WORD].map(c => { const s = document.createElement('span'); s.className = 'ch'; s.textContent = c === ' ' ? ' ' : c; wordEl.appendChild(s); return s; });
+const TOTAL = WORD.replace(/ /g, '').length;
+const STEP = .22, MORPH0 = 1.9, MORPH_END = MORPH0 + WORD.length * STEP;
+const iconsAfter = []; const consumeStep = new Array(7).fill(-1);
+{ let shown = 0, prev = 7;
+  for (let i = 0; i < WORD.length; i++) {
+    if (WORD[i] !== ' ') shown++;
+    const m = Math.ceil(7 * (TOTAL - shown) / TOTAL); iconsAfter[i] = m;
+    for (let k = 7 - prev; k < 7 - m; k++) consumeStep[k] = i;
+    prev = m;
+  } }
+
+/* ---------- cards ---------- */
+const ART = ['hands-silk','frances-borgona','olive-nails','manteca','lunares','ombre-lavanda','peroladas','leaf-drops','studio-desk','clase-taller','retrato-mesa','clase-frente'];
+const cards = ART.map(n => { const d = document.createElement('div'); d.className = 'card'; d.style.backgroundImage = `url("${PH(n)}")`; cardsEl.appendChild(d); return d; });
+const cur = cards.map(() => null);
+
+/* ---------- manifesto track ---------- */
+let cIdx = 0;
+const charsHTML = (txt, grey) => `<span class="mw${grey ? ' mg' : ''}">` + [...txt].map(ch => `<span class="mc" style="transition-delay:${(cIdx++) * 35}ms">${ch === ' ' ? '&nbsp;' : ch}</span>`).join('') + '</span>';
+const ISO = w => `<svg viewBox="0 0 1000 589.333" style="width:${w}em"><use href="#iso"/></svg>`;
+const SPARK = `<svg class="spark" viewBox="0 0 20 20" fill="#D3C1FF"><path d="M10 0c.8 5.6 3.6 8.6 10 10-6.4 1.4-9.2 4.4-10 10-.8-5.6-3.6-8.6-10-10 6.4-1.4 9.2-4.4 10-10z"/></svg>`;
+const W_ = (s, g = 0) => s.split(' ').map(w => ['w', w, g]);
+const ITEMS = [
+  ['intro'], ['photo','retrato-espejo',1.3,-6],
+  ...W_('Nairym'), ...W_('es el', 1), ...W_('encuentro'), ...W_('entre la', 1), ...W_('naturalidad'), ...W_('de quien es', 1),
+  ['photo','retrato-noche',1.05,8],
+  ...W_('y la', 1), ...W_('precisión'), ...W_('de la', 1), ...W_('profesional'), ...W_('que eligió', 1), ...W_('ser.'),
+  ['spark'],
+  ...W_('El', 1), ...W_('verde'), ...W_('traduce su', 1), ...W_('esencia natural,'),
+  ['swatch','Verde Oliva','#48552C','#F5F1E8',-6],
+  ...W_('el', 1), ...W_('lila'), ...W_('revela su conexión con la', 1), ...W_('tecnología,'),
+  ['spark'], ['swatch','Lila Precisión','#B69AE8','#28321C',5],
+  ...W_('y las', 1), ...W_('formas fluidas,'), ...W_('su capacidad de', 1), ...W_('transformación.'),
+  ['iso',1.5,-8], ['ratio'],
+  ...W_('Porque', 1), ...W_('evolucionar'), ...W_('no significa dejar de ser quien', 1), ...W_('eres,'),
+  ['photo','clase-estudio',1.2,6],
+  ...W_('sino', 1), ...W_('descubrir'), ...W_('nuevas formas'), ...W_('de expresar tu', 1), ...W_('esencia.'),
+  ['sp']
+];
+const mItems = ITEMS.map(it => {
+  const d = document.createElement('div'); d.className = 'mi'; cIdx = 0;
+  switch (it[0]) {
+    case 'intro':
+      d.classList.add('intro');
+      d.innerHTML = `<div>${charsHTML('Una identidad que')}</div><div>${charsHTML('evoluciona ')}${charsHTML('sin perder', 1)}${charsHTML(' su esencia.')}</div>
+        <span class="lab s pop" style="background:#D3C1FF;top:-1.25em;left:0;--r:-5deg">identidad visual</span>
+        <span class="lab s pop" style="background:#E7DFD0;top:-1.45em;left:5.6em;--r:-3deg">naturaleza · técnica · fluidez</span>
+        <span class="lab s pop" style="background:#A8B396;bottom:-1.4em;left:.8em;--r:4deg">Máster Nail Artist</span>`;
+      break;
+    case 'w': d.innerHTML = charsHTML(it[1], it[2]); break;
+    case 'photo': d.innerHTML = `<div class="photo pop" style="width:${it[2]}em;--r:${it[3]}deg;background-image:url('${PH(it[1])}')"></div>`; break;
+    case 'spark': d.innerHTML = `<div class="pop">${SPARK}</div>`; break;
+    case 'swatch': d.innerHTML = `<span class="lab pop" style="background:${it[2]};color:${it[3]};--r:${it[4]}deg">${it[1]}<small>${it[2]}</small></span>`; break;
+    case 'iso': d.innerHTML = `<div class="isoobj pop" style="--r:${it[2]}deg">${ISO(it[1])}</div>`; break;
+    case 'ratio': d.innerHTML = `<div class="ratio pop" style="--r:-4deg"><div class="bar"><i style="flex:60;background:#48552C"></i><i style="flex:30;background:#E7DFD0"></i><i style="flex:10;background:#B69AE8"></i></div><div class="rl"><span>60 verde</span><span>30 neutros</span><span>10 lila</span></div></div>`; break;
+    case 'sp': d.classList.add('spacer'); break;
+  }
+  track.appendChild(d); return {el: d, done: false};
+});
+
+/* ---------- metrics ---------- */
+let W, H, mob, U, N, HFS, IC, PFS, SFS, MFS, CAMW, CW, NAVH, storyTop, storyH, mTop, mH, cTop, trackW, smooth;
+let wordW = 0, charRight = [];
+function measureWord() { charRight = chars.map(c => c.offsetLeft + c.offsetWidth); wordW = charRight[charRight.length - 1] || 0; }
+function layout() {
+  W = root.clientWidth || innerWidth; H = root.clientHeight || innerHeight;
+  mob = W < 820 && W < H * 1.1;
+  document.body.classList.toggle('mob', mob);
+  U = Math.min(W / 1440, H / 800);
+  N = mob ? Math.min(1, W / 560) : clamp(W / 1440, .62, 1.25);
+  HFS = mob ? Math.min(W * .15, H * .1) : Math.min(W * .088, H * .16);
+  IC = HFS * .5;
+  PFS = mob ? Math.min(W * .1, 46) : Math.min(W * .042, H * .078);
+  SFS = mob ? Math.min(W * .13, 56) : Math.min(W * .06, H * .11);
+  MFS = mob ? Math.min(W * .12, H * .08) : Math.min(W * .058, H * .11);
+  CAMW = mob ? Math.min(W * .5, H * .26) : Math.min(W * .2, H * .34);
+  CW = mob ? Math.min(W * .30, H * .2) : Math.min(W / 1440, H / 780) * 218;
+  NAVH = 86 * N;
+  const set = (k, v) => root.style.setProperty(k, v);
+  set('--u', U + 'px'); set('--n', N); set('--hfs', HFS + 'px'); set('--ic', IC + 'px'); set('--pfs', PFS + 'px');
+  set('--sfs', SFS + 'px'); set('--mfs', MFS + 'px'); set('--camw', CAMW + 'px');
+  cardsEl.style.setProperty('--cw', CW);
+  smooth = !RM && !mob && matchMedia('(pointer: fine)').matches;
+  storyTop = story.offsetTop; storyH = story.offsetHeight; mTop = man.offsetTop; mH = man.offsetHeight;
+  measureBook();
+  trackW = track.scrollWidth;
+  measureWord(); lastN = -1;
+}
+
+/* brand book section offsets (layout positions, unaffected by the smoothing transform) */
+let secs = [];
+function measureBook() {
+  const b0 = book.offsetTop;
+  secs = bookSecs.map(s => ({id: s.id, top: b0 + s.offsetTop, h: s.offsetHeight, dark: s.classList.contains('dark') || s.id === 'cierre'}));
+  cTop = b0 + cierre.offsetTop;
+}
+new ResizeObserver(() => { if (W) measureBook(); }).observe(book);
+
+/* ---------- hero group layout ---------- */
+let lastN = -1, glideOn = false;
+function heroLayout(n) {
+  const gap = IC * .2, lead = gap * 1.6;
+  const m = n === 0 ? 7 : iconsAfter[n - 1];
+  let last = n - 1; while (last >= 0 && WORD[last] === ' ') last--;
+  const Ln = last >= 0 ? charRight[last] : 0;
+  const iw = m ? m * IC + (m - 1) * gap : 0;
+  const G = n === 0 ? iw : (m ? Ln + lead + iw : wordW);
+  const left0 = W / 2 - G / 2;
+  wordEl.style.left = left0 + 'px';
+  const base = n === 0 ? left0 : left0 + Ln + lead;
+  for (let k = 0; k < m; k++) { const idx = 7 - m + k; icons[idx].style.left = base + k * (IC + gap) + 'px'; }
+}
+function landingSlot() { const gap = IC * .2, G = 7 * IC + 6 * gap; return [W / 2 - G / 2 + IC / 2, H * .40]; }
+
+/* ---------- flight path of the isotipo ---------- */
+const PATH = [[.33,-4,74],[.45,4,71],[.60,13,65],[.70,22,55],[.80,31,44],[.87,32.5,47.5],[.93,26,48],[1.00,21.5,45],[1.07,22.5,51.5],[1.15,27,52]];
+function flyAt(t) {
+  const [lx, ly] = landingSlot();
+  const pts = PATH.map(p => [p[0], p[1] / 100 * W, p[2] / 100 * H]); pts.push([1.27, lx, ly]);
+  t = clamp(t, pts[0][0], 1.27);
+  let k = 0; while (k < pts.length - 2 && t > pts[k + 1][0]) k++;
+  const p0 = pts[Math.max(k - 1, 0)], p1 = pts[k], p2 = pts[k + 1], p3 = pts[Math.min(k + 2, pts.length - 1)];
+  const s = (t - p1[0]) / (p2[0] - p1[0]), s2 = s * s, s3 = s2 * s;
+  const cr = i => .5 * ((2 * p1[i]) + (-p0[i] + p2[i]) * s + (2 * p0[i] - 5 * p1[i] + 4 * p2[i] - p3[i]) * s2 + (-p0[i] + 3 * p1[i] - 3 * p2[i] + p3[i]) * s3);
+  return [cr(1), cr(2)];
+}
+
+/* ---------- card poses ---------- */
+const stepA = r => 2 * Math.asin(Math.min(1, 1.05 * CW / (2 * r)));
+const HID = () => [W * .5, H * 1.4, 0, 1, 0];
+const SC_D = [[.08,.46,-20],[.20,.86,-12],[.80,.84,14],[.38,1.04,-8],[.92,.42,16],[.62,1.04,9]];
+const SC_M = [[.06,.62,-20],[.45,.70,12],[.94,.62,16],[.22,.95,-14],[.72,.98,9],[.5,1.3,0]];
+const INTRO = {5: .53, 2: .60, 0: .63, 1: .70, 3: .80, 4: .86};
+function fan(i, t) {
+  if (i > 5) return HID();
+  let r0, cx, cy, th, x, y;
+  if (mob) { r0 = W * 1.35; th = (i - 2.5) * stepA(r0); cx = W * .5; cy = H * .86 + r0; x = cx + r0 * Math.sin(th); y = cy - r0 * Math.cos(th) + CW * .2; }
+  else { r0 = 1250 * W / 1440; th = (i - 2.5) * stepA(r0); cx = W * .55; cy = H * .86 + r0; x = cx + r0 * Math.sin(th) - W * .02; y = cy - r0 * Math.cos(th); }
+  let r = th * 180 / Math.PI;
+  const lt = clamp((t - INTRO[i]) / .7);
+  if (lt < 1) { const e = backOut(lt, 1.15); y = lerp(H + CW * 1.2, y, e); r = lerp(r + 8, r, e); }
+  return [x, y, r, 1, 1];
+}
+function scatter(i) {
+  if (i > 5) return HID();
+  const s = (mob ? SC_M : SC_D)[i]; let fy = s[1];
+  if (H < 500 && fy < .1) fy += .08;
+  return [W * s[0], H * fy, s[2], 1, 1];
+}
+function pile(i) { return [W * .5 + ((i % 3) - 1) * CW * .08, H * .64 + (((i * 7) % 5) - 2) * CW * .04, (i % 2 ? -1 : 1) * (4 + i * 1.3), 1, 1]; }
+function wheel(i, rot) {
+  const r0 = mob ? W * 1.2 : 900 * W / 1440, cx = W * .5, cy = (mob ? H * .78 : H * .84) + r0;
+  const slot = (((i + rot) % 12) + 12) % 12 - 5.5;
+  const a = slot * stepA(r0), deg = a * 180 / Math.PI;
+  return [cx + r0 * Math.sin(a), cy - r0 * Math.cos(a), deg, 1, clamp((66 - Math.abs(deg)) / 8)];
+}
+const mix = (a, b, e) => a.map((v, j) => lerp(v, b[j], e));
+const span = (p, r) => clamp((p - r[0]) / (r[1] - r[0]));
+function cardTarget(i, p, t) {
+  if (p < R.pile[0]) return mix(fan(i, t), scatter(i), eInOut(span(p, R.scatter)));
+  if (p < R.pile[1]) return mix(scatter(i), pile(i), eInOut(span(p, R.pile)));
+  if (p < R.wheel[1]) return mix(pile(i), wheel(i, 0), eGlide(span(p, R.wheel)));
+  return wheel(i, -3 * eInOut(span(p, R.turn)));
+}
+
+/* ---------- scroll state + navigation ---------- */
+let sy = scrollY, ty = scrollY, lastWheel = -1e9;
+addEventListener('wheel', e => {
+  if (NS.locked) { e.preventDefault(); return; }
+  if (!smooth || e.ctrlKey) return;
+  if (e.target.closest && e.target.closest('.chbar,.ig-hl,textarea,select')) return;
+  // the brand book scrolls natively; only the cinematic part is smoothed
+  const bTop = secs.length ? secs[0].top : Infinity;
+  if (scrollY >= bTop - H * .02 && (e.deltaY > 0 || scrollY > bTop + 4)) { lastWheel = -1e9; return; }
+  e.preventDefault();
+  const mult = e.deltaMode === 1 ? 32 : e.deltaMode === 2 ? H : 1;
+  if (performance.now() - lastWheel > 250) ty = scrollY;
+  ty = clamp(ty + e.deltaY * mult * .75, 0, root.scrollHeight - H);
+  lastWheel = performance.now();
+  scrollTo(0, ty);
+}, {passive: false});
+const storyY = f => storyTop + f * (storyH - H);
+function go(y) {
+  // long jumps (e.g. menu → brand book) cut straight there instead of gliding through the whole story
+  const far = Math.abs(y - sy) > H * 3;
+  ty = y; lastWheel = far ? -1e9 : performance.now(); scrollTo(0, y);
+  if (!smooth || far) sy = y;
+}
+$$('[data-go]').forEach(a => a.addEventListener('click', e => {
+  e.preventDefault();
+  const g = a.dataset.go, s = secs.find(x => x.id === g);
+  go(g === 'top' ? 0 : g === 'manifiesto' ? mTop : s ? s.top : storyY(R.jump[g]));
+}));
+NS.go = go;
+pind.forEach(b => b.addEventListener('click', () => go(storyY(R.jump.pil[+b.dataset.pil]))));
+const stickyTop = (s, top, bottom) => Math.min(Math.max(top - s, 0), bottom - H - s);
+
+/* pointer: the isotipo leans toward the cursor */
+let px = 0, py = 0, spx = 0, spy = 0;
+addEventListener('pointermove', e => { px = e.clientX / W * 2 - 1; py = e.clientY / H * 2 - 1; }, {passive: true});
+
+/* closing section */
+const cVid = cierre.querySelector('video');
+new IntersectionObserver(([en]) => {
+  if (en.isIntersecting) { cierre.classList.add('in'); if (!RM) { if (!cVid.src) cVid.src = cVid.dataset.src; cVid.play().catch(() => {}); } }
+  else if (!cVid.paused) cVid.pause();
+}, {threshold: .35}).observe(cierre);
+
+/* ---------- reveal state ---------- */
+let procStart = null, sd = 0, introDone = false, activePil = -1, pilStart = 0;
+
+/* ---------- loop ---------- */
+const t0 = performance.now(); let last = t0;
+function frame(now) {
+  const dt = Math.min(64, now - last); last = now;
+  const rt = (now - t0) / 1000, t = RM ? 99 : rt;
+
+  const nY = scrollY;
+  const inBookNow = secs.length && nY >= secs[0].top - 2;
+  if (smooth) {
+    if (now - lastWheel > 250) ty = nY;
+    sy += (ty - sy) * kf(.06, dt);
+    if (Math.abs(ty - sy) < .05 || (inBookNow && sy > secs[0].top - H)) sy = ty;
+    hero.style.transform = `translateY(${nY - sy}px)`;
+    stage.style.transform = `translateY(${stickyTop(sy, storyTop, storyTop + storyH) - stickyTop(nY, storyTop, storyTop + storyH)}px)`;
+    mstage.style.transform = `translateY(${stickyTop(sy, mTop, mTop + mH) - stickyTop(nY, mTop, mTop + mH)}px)`;
+  } else sy = nY;
+  const p = RM ? 0 : clamp((sy - storyTop) / (storyH - H));
+  spx += (px - spx) * kf(.05, dt); spy += (py - spy) * kf(.05, dt);
+
+  // nav intro
+  if (!introDone) {
+    logo.style.opacity = eOut(clamp((t - .15) / .2));
+    links.forEach((a, i) => { const e = eOut(clamp((t - (.2 + i * .03)) / .22)); a.style.opacity = e; a.style.transform = `translateY(${(1 - e) * 6}px)`; });
+    const e = eOut(clamp((t - .23) / .19));
+    cta.style.clipPath = `inset(0 0 0 ${(1 - e) * 100}% round 999px)`;
+  }
+
+  // headline morph
+  const nShown = clamp(Math.floor((t - MORPH0) / STEP) + 1, 0, WORD.length);
+  if (nShown !== lastN) {
+    heroLayout(nShown); lastN = nShown;
+    if (!glideOn && !RM) requestAnimationFrame(() => { wordEl.classList.add('glide'); icons.forEach(ic => ic.classList.add('glide')); glideOn = true; });
+  }
+  if (!introDone) {
+    chars.forEach((c, i) => { const u = (t - (MORPH0 + i * STEP)) / STEP; const w = eOut(clamp((u - .32) / .58));
+      c.style.clipPath = w >= 1 ? 'none' : `inset(0 ${(1 - w) * 100}% 0 0)`; });
+    icons.forEach((ic, j) => {
+      const a0 = j === 0 ? 1.27 : 1.27 + .03 + (j - 1) * .07;
+      let o, sc, sx = 1, syy = 1, rot = 0, br = 1;
+      if (j === 0) { o = clamp((t - 1.27) / .06); sc = 1; }
+      else { const u = clamp((t - a0) / .32); sc = t < a0 ? 0 : backOut(u, 1.15); o = clamp((t - a0) / .12); }
+      const cs = consumeStep[j];
+      if (cs >= 0) { const u = (t - (MORPH0 + cs * STEP)) / STEP;
+        if (u >= 0) { const a = clamp(u / .45); syy = lerp(1, .16, a); sx = lerp(1, 1.25, a); rot = -28 * a; br = 1 - a;
+          if (u > .45) { const b = clamp((u - .45) / .55); rot = -28 - 62 * b; o *= 1 - b; } } }
+      ic.style.opacity = o;
+      ic.style.transform = `rotate(${rot}deg) scale(${sc * sx},${sc * syy})`;
+      ic.style.filter = br < 1 ? `brightness(${br})` : '';
+    });
+    if (t >= .33 && t < 1.33) {
+      const [x, y] = flyAt(t), [x2, y2] = flyAt(Math.min(t + .01, 1.27)), [x0, y0] = flyAt(t - .01);
+      const ang = Math.atan2(y2 - y0, x2 - x0) * 180 / Math.PI * .55;
+      let s = 1, o = 1; if (t > 1.15) { const f = clamp((t - 1.15) / .18); s = lerp(1, .45, f); o = 1 - f * f; }
+      flyer.style.opacity = o;
+      const fw = 86 * U, fh = fw / 1.697;
+      flyer.style.transform = `translate(${x - fw / 2}px,${y - fh / 2}px) rotate(${ang}deg) scale(${s})`;
+    } else flyer.style.opacity = 0;
+    const ee = eOut(clamp((t - MORPH_END) / .8));
+    eyebrow.style.opacity = ee; eyebrow.style.transform = `translateY(${(1 - ee) * 10}px)`;
+    if (t > MORPH_END + 1) introDone = true;
+  }
+  const hTop = H * .40 - HFS * .55 - sy;
+  hl.style.opacity = p > .05 ? 0 : clamp((hTop - (NAVH + .55 * HFS)) / (1.35 * HFS));
+
+  // cards
+  let settled = true;
+  for (let i = 0; i < 12; i++) {
+    const T = cardTarget(i, p, t);
+    let c = cur[i];
+    if (!c || p < .002 || RM) c = cur[i] = T.slice();
+    else { const k = kf(.055 + (i % 4) * .008, dt); for (let j = 0; j < 5; j++) c[j] += (T[j] - c[j]) * k; }
+    if (Math.abs(T[0] - c[0]) > 3 || Math.abs(T[1] - c[1]) > 3 || Math.abs(T[2] - c[2]) > 1) settled = false;
+    const el = cards[i];
+    el.style.transform = `translate3d(${c[0]}px,${c[1]}px,0) rotate(${c[2]}deg) scale(${c[3]})`;
+    el.style.opacity = c[4]; el.style.visibility = c[4] < .01 ? 'hidden' : 'visible';
+  }
+
+  // essence block
+  if (p < R.procIn[0]) {
+    if (procStart !== null || proc.style.visibility !== 'hidden') {
+      proc.style.visibility = 'hidden'; proc.style.opacity = 0; procStart = null;
+      procWords.forEach(w => { w.style.opacity = 0; }); sub.style.opacity = 0; btn2.style.opacity = 0;
+    }
+  } else {
+    proc.style.visibility = 'visible'; proc.style.opacity = span(p, R.procIn);
+    if (p > R.procReveal && procStart === null) procStart = rt;
+    const el = procStart === null ? -1 : (RM ? 99 : rt - procStart);
+    if (el < 3) {
+      procWords.forEach((w, i) => { const e = eOut(clamp((el - i * .11) / .55));
+        w.style.opacity = e; w.style.transform = `translateY(${(1 - e) * .35}em)`; w.style.filter = e < 1 ? `blur(${(1 - e) * 6}px)` : 'none'; });
+      const es = eOut(clamp((el - .7) / .5)), eb = eOut(clamp((el - .85) / .5));
+      sub.style.opacity = es; sub.style.transform = `translateY(${(1 - es) * 8}px)`;
+      btn2.style.opacity = eb; btn2.style.transform = `translateY(${(1 - eb) * 8}px)`;
+    }
+  }
+
+  // film panel (waits for the wheel to settle)
+  const skyT = (p >= R.panelGate && settled) ? span(p, R.panel) : 0;
+  sd = RM ? skyT : sd + (skyT - sd) * kf(.09, dt);
+  if (Math.abs(sd - skyT) < .0005) sd = skyT;
+  if (sd > .0005) {
+    const e = eInOut(sd);
+    const [wW, wH, up] = mob ? [44, 18, 4] : [18, 22, 10];
+    const top = lerp(50 - up - wH / 2, 0, e), bot = lerp(100 - (50 - up + wH / 2), 0, e), side = lerp((100 - wW) / 2, 0, e);
+    sky.style.visibility = 'visible';
+    sky.style.opacity = clamp(sd / .04);
+    sky.style.clipPath = `inset(${top}% ${side}% ${bot}% ${side}% round ${lerp(mob ? 120 : 220, 0, e)}px)`;
+    skyimg.style.transform = `scale(${lerp(1.2, 1, e)})`;
+    // films crossfade
+    const a1 = span(p, R.x1), a2 = span(p, R.x2);
+    const op = [1 - a1, a1 * (1 - a2), a2];
+    films.forEach((v, i) => { v.style.opacity = op[i];
+      if (!RM) { if (op[i] > .01 && v.paused) v.play().catch(() => {}); else if (op[i] <= .01 && !v.paused) v.pause(); } });
+    // isotipo
+    const yaw = lerp(-12, 12, span(p, R.yaw)) + spx * 10, pitch = -spy * 6;
+    const bob = Math.sin(rt * 1.4) * 7 * N;
+    const gate = clamp((sd - .9) / .1);
+    const q = Math.pow(span(p, R.zoom), 1.6) * gate;
+    const s = lerp(.5, 1, e) * (1 + q * q * 30);
+    const glow = .35 + .45 * op[1];
+    // size the box itself (not a scale transform) so the vector stays sharp while zooming into the drop
+    const ih = CAMW / 1.697, ox = W * .5 + CAMW * .39, oy = H * .53 - ih * .31;
+    iso.style.width = CAMW * s + 'px';
+    iso.style.left = ox - .89 * CAMW * s + 'px'; iso.style.top = oy - .19 * ih * s + 'px';
+    iso.style.transform = `perspective(900px) translateY(${bob}px) rotateY(${yaw * (1 - q)}deg) rotateX(${pitch * (1 - q)}deg)`;
+    iso.style.filter = s > 3 ? 'none' : `drop-shadow(0 0 ${18 + 22 * op[1]}px rgba(211,193,255,${glow})) drop-shadow(0 ${CAMW * .1}px ${CAMW * .08}px rgba(20,26,12,.35))`;
+    black.style.opacity = clamp((q - .45) / .4);
+    // pillars
+    const idx = p < (R.x1[0] + R.x1[1]) / 2 ? 0 : p < (R.x2[0] + R.x2[1]) / 2 ? 1 : 2;
+    const full = sd > .995 && q < .2;
+    const want = full ? idx : -1;
+    if (want !== activePil) { activePil = want; pilStart = rt; }
+    pind.forEach((b, i) => b.classList.toggle('on', i === idx));
+    $('.pind').style.opacity = full ? 1 : 0; $('.pind').style.pointerEvents = full ? 'auto' : 'none';
+    pils.forEach((g, i) => {
+      const lab = g.querySelector('.pl-lab'), ti = g.querySelector('.pl-title span'), body = g.querySelector('.pl-body');
+      if (i === activePil) {
+        const el = RM ? 99 : rt - pilStart;
+        const a = eOut(clamp(el / .5)), b = eOut(clamp((el - .12) / .7)), c = eOut(clamp((el - .45) / .7));
+        lab.style.opacity = a; lab.style.transform = `translateY(${(1 - a) * 8}px)`;
+        ti.style.opacity = b; ti.style.transform = `translateY(${(1 - b) * .3}em)`; ti.style.filter = b < 1 ? `blur(${(1 - b) * 8}px)` : 'none';
+        body.style.opacity = c; body.style.transform = `translateY(${(1 - c) * 12}px)`;
+      } else { lab.style.opacity = 0; ti.style.opacity = 0; body.style.opacity = 0; }
+    });
+  } else {
+    if (sky.style.visibility !== 'hidden') { sky.style.visibility = 'hidden'; films.forEach(v => { if (!v.paused) v.pause(); }); }
+    black.style.opacity = 0; activePil = -1;
+  }
+
+  // manifesto
+  if (!RM) {
+    const mp = clamp((sy - mTop) / (mH - H));
+    const x0 = W * (mob ? .08 : .06), x1 = -(trackW - W * .9);
+    const tx = lerp(x0, x1, mp);
+    track.style.transform = `translate3d(${tx}px,-50%,0)`;
+    if (mTop - sy < H * .2) {
+      const edge = W * (mob ? .92 : .86);
+      for (const it of mItems) if (!it.done && tx + it.el.offsetLeft < edge) { it.done = true; it.el.classList.add('in'); it.el.querySelectorAll('.pop').forEach(x => x.classList.add('in')); }
+    }
+  }
+
+  // nav state
+  const probe = sy + NAVH * .5;
+  const here = secs.find(s => probe >= s.top && probe < s.top + s.h);
+  const dark = here ? here.dark : (p > .985 || sy >= mTop - NAVH || sd > .85);
+  document.body.classList.toggle('dark-nav', dark);
+  root.classList.toggle('end', p > .95);
+  const inBook = here && here.id !== 'sistema' && here.id !== 'cierre';
+  const sec = here ? (here.id === 'redes' ? 'redes' : here.id === 'descargas' ? 'descargas' : 'sistema')
+    : sy >= mTop - NAVH ? 'manifiesto' : p > .45 ? 'pilares' : 'top';
+  links.forEach(a => a.classList.toggle('cur', a.dataset.go === sec));
+  chbar.classList.toggle('on', !!inBook);
+  document.body.classList.toggle('book-nav', !!here && here.id !== 'cierre');
+  if (inBook) {
+    const probe2 = sy + H * .35, cur2 = secs.find(s => probe2 >= s.top && probe2 < s.top + s.h) || here;
+    chbar.classList.toggle('dk', cur2.dark);
+    chLinks.forEach(a => a.classList.toggle('cur', a.dataset.go === cur2.id));
+  }
+
+  requestAnimationFrame(frame);
+}
+
+layout();
+if (RM) mItems.forEach(it => { it.el.classList.add('in'); it.el.querySelectorAll('.pop').forEach(x => x.classList.add('in')); });
+addEventListener('resize', () => { layout(); ty = sy = scrollY; });
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { measureWord(); trackW = track.scrollWidth; lastN = -1; });
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

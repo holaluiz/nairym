@@ -1,0 +1,14 @@
+/* Nairym Sosa — Tokens de color (propuesta para aprobación) */
+:root {
+  --ns-verde: #48552C; /* rgb(72, 85, 44) */
+  --ns-verde-profundo: #28321C; /* rgb(40, 50, 28) */
+  --ns-verde-medio: #65734B; /* rgb(101, 115, 75) */
+  --ns-verde-suave: #A8B396; /* rgb(168, 179, 150) */
+  --ns-marfil: #F5F1E8; /* rgb(245, 241, 232) */
+  --ns-beige: #E7DFD0; /* rgb(231, 223, 208) */
+  --ns-arena: #D4C6B3; /* rgb(212, 198, 179) */
+  --ns-grafito: #262820; /* rgb(38, 40, 32) */
+  --ns-lila: #B69AE8; /* rgb(182, 154, 232) */
+  --ns-lila-luminoso: #D3C1FF; /* rgb(211, 193, 255) */
+  --ns-violeta: #7860AD; /* rgb(120, 96, 173) */
+}

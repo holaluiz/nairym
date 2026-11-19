@@ -1,0 +1,445 @@
+{
+  "status": "propuesta-para-aprobacion",
+  "note": "Paleta inicial de dirección de arte. Pendiente de aprobación por Nairym. CMYK = conversión aproximada sin perfil ICC; validar con la imprenta (perfil recomendado: FOGRA39 / ISO Coated v2).",
+  "groups": [
+    {
+      "id": "verde",
+      "label": "Verde",
+      "share": 60,
+      "meaning": "Naturalidad. Tu esencia: auténtica, ligera y equilibrada."
+    },
+    {
+      "id": "neutro",
+      "label": "Neutros",
+      "share": 30,
+      "meaning": "Equilibrio. El respiro que hace brillar la fotografía y el contenido."
+    },
+    {
+      "id": "lila",
+      "label": "Lila",
+      "share": 10,
+      "meaning": "Tecnología. La precisión técnica que aparece como una luz discreta."
+    }
+  ],
+  "colors": [
+    {
+      "id": "verde",
+      "name": "Verde Oliva",
+      "group": "verde",
+      "hex": "#48552C",
+      "role": "Color principal de la identidad. Fondos de marca, isotipo, titulares sobre claro.",
+      "uses": [
+        "Fondos de marca",
+        "Isotipo y firma",
+        "Titulares sobre marfil"
+      ],
+      "rgb": [
+        72,
+        85,
+        44
+      ],
+      "cmyk": [
+        15,
+        0,
+        48,
+        67
+      ],
+      "onWhite": 8.04,
+      "bestPairs": [
+        {
+          "id": "marfil",
+          "ratio": 7.13
+        },
+        {
+          "id": "beige",
+          "ratio": 6.07
+        },
+        {
+          "id": "lila-luminoso",
+          "ratio": 4.92
+        },
+        {
+          "id": "arena",
+          "ratio": 4.8
+        }
+      ],
+      "cmykNote": "aproximado"
+    },
+    {
+      "id": "verde-profundo",
+      "name": "Verde Profundo",
+      "group": "verde",
+      "hex": "#28321C",
+      "role": "Ambientes inmersivos y fondos oscuros. Da profundidad y elegancia.",
+      "uses": [
+        "Fondos de video",
+        "Portadas",
+        "Texto sobre claro"
+      ],
+      "rgb": [
+        40,
+        50,
+        28
+      ],
+      "cmyk": [
+        20,
+        0,
+        44,
+        80
+      ],
+      "onWhite": 13.43,
+      "bestPairs": [
+        {
+          "id": "marfil",
+          "ratio": 11.92
+        },
+        {
+          "id": "beige",
+          "ratio": 10.15
+        },
+        {
+          "id": "lila-luminoso",
+          "ratio": 8.21
+        },
+        {
+          "id": "arena",
+          "ratio": 8.01
+        }
+      ],
+      "cmykNote": "aproximado"
+    },
+    {
+      "id": "verde-medio",
+      "name": "Verde Musgo",
+      "group": "verde",
+      "hex": "#65734B",
+      "role": "Transiciones, elementos secundarios, ilustraciones y patrones.",
+      "uses": [
+        "Patrones",
+        "Íconos",
+        "Bloques secundarios"
+      ],
+      "rgb": [
+        101,
+        115,
+        75
+      ],
+      "cmyk": [
+        12,
+        0,
+        35,
+        55
+      ],
+      "onWhite": 5.11,
+      "bestPairs": [
+        {
+          "id": "marfil",
+          "ratio": 4.54
+        }
+      ],
+      "cmykNote": "aproximado"
+    },
+    {
+      "id": "verde-suave",
+      "name": "Verde Salvia",
+      "group": "verde",
+      "hex": "#A8B396",
+      "role": "Tono de respiro dentro del verde. Fondos suaves y detalles.",
+      "uses": [
+        "Fondos suaves",
+        "Separadores",
+        "Texto sobre verde profundo"
+      ],
+      "rgb": [
+        168,
+        179,
+        150
+      ],
+      "cmyk": [
+        6,
+        0,
+        16,
+        30
+      ],
+      "onWhite": 2.2,
+      "bestPairs": [
+        {
+          "id": "grafito",
+          "ratio": 6.79
+        },
+        {
+          "id": "verde-profundo",
+          "ratio": 6.11
+        }
+      ],
+      "cmykNote": "aproximado"
+    },
+    {
+      "id": "marfil",
+      "name": "Marfil",
+      "group": "neutro",
+      "hex": "#F5F1E8",
+      "role": "Base clara principal. Respiro, legibilidad y elegancia.",
+      "uses": [
+        "Fondos claros",
+        "Texto sobre verde",
+        "Papelería"
+      ],
+      "rgb": [
+        245,
+        241,
+        232
+      ],
+      "cmyk": [
+        0,
+        2,
+        5,
+        4
+      ],
+      "onWhite": 1.13,
+      "bestPairs": [
+        {
+          "id": "grafito",
+          "ratio": 13.24
+        },
+        {
+          "id": "verde-profundo",
+          "ratio": 11.92
+        },
+        {
+          "id": "verde",
+          "ratio": 7.13
+        },
+        {
+          "id": "violeta",
+          "ratio": 4.57
+        }
+      ],
+      "cmykNote": "aproximado"
+    },
+    {
+      "id": "beige",
+      "name": "Beige Natural",
+      "group": "neutro",
+      "hex": "#E7DFD0",
+      "role": "Superficies secundarias, tarjetas y bloques editoriales.",
+      "uses": [
+        "Tarjetas",
+        "Bloques",
+        "Empaques"
+      ],
+      "rgb": [
+        231,
+        223,
+        208
+      ],
+      "cmyk": [
+        0,
+        3,
+        10,
+        9
+      ],
+      "onWhite": 1.32,
+      "bestPairs": [
+        {
+          "id": "grafito",
+          "ratio": 11.28
+        },
+        {
+          "id": "verde-profundo",
+          "ratio": 10.15
+        },
+        {
+          "id": "verde",
+          "ratio": 6.07
+        }
+      ],
+      "cmykNote": "aproximado"
+    },
+    {
+      "id": "arena",
+      "name": "Arena",
+      "group": "neutro",
+      "hex": "#D4C6B3",
+      "role": "Bordes, líneas y texturas cálidas.",
+      "uses": [
+        "Líneas",
+        "Bordes",
+        "Texturas"
+      ],
+      "rgb": [
+        212,
+        198,
+        179
+      ],
+      "cmyk": [
+        0,
+        7,
+        16,
+        17
+      ],
+      "onWhite": 1.68,
+      "bestPairs": [
+        {
+          "id": "grafito",
+          "ratio": 8.91
+        },
+        {
+          "id": "verde-profundo",
+          "ratio": 8.01
+        },
+        {
+          "id": "verde",
+          "ratio": 4.8
+        }
+      ],
+      "cmykNote": "aproximado"
+    },
+    {
+      "id": "grafito",
+      "name": "Grafito Orgánico",
+      "group": "neutro",
+      "hex": "#262820",
+      "role": "Texto de lectura sobre fondos claros.",
+      "uses": [
+        "Texto corrido",
+        "Datos técnicos",
+        "Interfaces"
+      ],
+      "rgb": [
+        38,
+        40,
+        32
+      ],
+      "cmyk": [
+        5,
+        0,
+        20,
+        84
+      ],
+      "onWhite": 14.93,
+      "bestPairs": [
+        {
+          "id": "marfil",
+          "ratio": 13.24
+        },
+        {
+          "id": "beige",
+          "ratio": 11.28
+        },
+        {
+          "id": "lila-luminoso",
+          "ratio": 9.13
+        },
+        {
+          "id": "arena",
+          "ratio": 8.91
+        }
+      ],
+      "cmykNote": "aproximado"
+    },
+    {
+      "id": "lila",
+      "name": "Lila Precisión",
+      "group": "lila",
+      "hex": "#B69AE8",
+      "role": "Acento técnico. Solo en detalles: luz, reflejos, estados activos.",
+      "uses": [
+        "Reflejos de luz",
+        "Estados activos",
+        "Microdetalles"
+      ],
+      "rgb": [
+        182,
+        154,
+        232
+      ],
+      "cmyk": [
+        22,
+        34,
+        0,
+        9
+      ],
+      "onWhite": 2.39,
+      "bestPairs": [
+        {
+          "id": "grafito",
+          "ratio": 6.24
+        },
+        {
+          "id": "verde-profundo",
+          "ratio": 5.61
+        }
+      ],
+      "cmykNote": "aproximado"
+    },
+    {
+      "id": "lila-luminoso",
+      "name": "Lila Luminoso",
+      "group": "lila",
+      "hex": "#D3C1FF",
+      "role": "Brillo sobre fondos oscuros. Destellos y luz de equipos.",
+      "uses": [
+        "Brillos sobre verde profundo",
+        "Líneas de luz"
+      ],
+      "rgb": [
+        211,
+        193,
+        255
+      ],
+      "cmyk": [
+        17,
+        24,
+        0,
+        0
+      ],
+      "onWhite": 1.64,
+      "bestPairs": [
+        {
+          "id": "grafito",
+          "ratio": 9.13
+        },
+        {
+          "id": "verde-profundo",
+          "ratio": 8.21
+        },
+        {
+          "id": "verde",
+          "ratio": 4.92
+        }
+      ],
+      "cmykNote": "aproximado"
+    },
+    {
+      "id": "violeta",
+      "name": "Violeta Profundo",
+      "group": "lila",
+      "hex": "#7860AD",
+      "role": "Acento técnico legible sobre fondos claros.",
+      "uses": [
+        "Enlaces sobre marfil",
+        "Íconos técnicos"
+      ],
+      "rgb": [
+        120,
+        96,
+        173
+      ],
+      "cmyk": [
+        31,
+        45,
+        0,
+        32
+      ],
+      "onWhite": 5.15,
+      "bestPairs": [
+        {
+          "id": "marfil",
+          "ratio": 4.57
+        }
+      ],
+      "cmykNote": "aproximado"
+    }
+  ]
+}
