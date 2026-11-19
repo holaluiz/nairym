@@ -189,7 +189,7 @@ body.rm .rv{opacity:1;transform:none}
 .mocks figcaption b{display:block;font-family:var(--serif);font-weight:500;font-size:22px}
 .mocks figcaption span{display:block;font-size:13.5px;color:#C9CDB9;line-height:1.5;margin-top:4px}
 @media (max-width:899px){.mocks{grid-template-columns:1fr 1fr}.mocks figure,.mocks figure:nth-child(1),.mocks figure:nth-child(2),.mocks figure:nth-child(9),.mocks figure:nth-child(10){grid-column:span 1}.mocks figure:nth-child(1){grid-column:span 2}}
-.elems{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.elems{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px}
 @media (max-width:899px){.elems{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .elems a{display:flex;flex-direction:column;gap:10px;font-size:12.5px;color:#C9CDB9}
 .elems a i{aspect-ratio:1;border-radius:16px;background:var(--marfil);display:grid;place-items:center;transition:background .3s}

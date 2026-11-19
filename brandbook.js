@@ -143,7 +143,7 @@ const MOCKS = [
   ['uniforme','Uniforme profesional','Isotipo marfil aplicado al pecho (simulación de bordado).']
 ];
 $('.mocks').innerHTML = MOCKS.map(([f, t, d], i) => `<figure class="rv"><button type="button" data-i="${i}" aria-label="Ver ${t}"><img src="${K}mockups/nairym-mockup-${f}-web.jpg" alt="${t}" loading="lazy"></button><figcaption><b>${t}</b><span>${d}</span></figcaption></figure>`).join('');
-const ELEMS = [['patron-isotipo','Patrón'],['isotipo-contorno','Isotipo contorno'],['flow-linea-superior','Línea flow superior'],['flow-linea-inferior','Línea flow inferior'],['marco-flow','Marco flow'],['mascara-flow','Máscara flow']];
+const ELEMS = [['patron-isotipo','Patrón'],['isotipo-contorno','Isotipo contorno'],['flow-linea-superior','Línea flow superior'],['flow-linea-inferior','Línea flow inferior'],['marco-flow','Marco flow'],['mascara-flow','Máscara flow'],['construccion-vectorial','Construcción']];
 $('.elems').innerHTML = ELEMS.map(([f, t]) => `<a href="${K}graphic-elements/nairym-${f}.svg" download title="Descargar SVG"><i><img src="${K}graphic-elements/nairym-${f}.svg" alt="" loading="lazy"></i>${t}</a>`).join('');
 
 /* ================= LIGHTBOX ================= */
