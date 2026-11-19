@@ -140,7 +140,7 @@ const MOCKS = [
   ['pared','Señalética del estudio','Firma en relieve sobre muro marfil.']
 ];
 $('.mocks').innerHTML = MOCKS.map(([f, t, d], i) => `<figure class="rv"><button type="button" data-i="${i}" aria-label="Ver ${t}"><img src="${K}mockups/nairym-mockup-${f}-web.jpg" alt="${t}" loading="lazy"></button><figcaption><b>${t}</b><span>${d}</span></figcaption></figure>`).join('');
-const ELEMS = [['gota','Gota'],['isotipo-contorno','Isotipo contorno'],['flow-linea-superior','Línea flow superior'],['flow-linea-inferior','Línea flow inferior'],['marco-flow','Marco flow'],['mascara-flow','Máscara flow'],['patron-isotipo','Patrón']];
+const ELEMS = [['patron-isotipo','Patrón'],['isotipo-contorno','Isotipo contorno'],['flow-linea-superior','Línea flow superior'],['flow-linea-inferior','Línea flow inferior'],['marco-flow','Marco flow'],['mascara-flow','Máscara flow']];
 $('.elems').innerHTML = ELEMS.map(([f, t]) => `<a href="${K}graphic-elements/nairym-${f}.svg" download title="Descargar SVG"><i><img src="${K}graphic-elements/nairym-${f}.svg" alt="" loading="lazy"></i>${t}</a>`).join('');
 
 /* ================= LIGHTBOX ================= */
@@ -171,6 +171,12 @@ function cover(ctx, img, x, y, w, h, fy = .5) {
   const s = Math.max(w / img.width, h / img.height), iw = img.width * s, ih = img.height * s;
   ctx.drawImage(img, x + (w - iw) / 2, y + (h - ih) * fy, iw, ih);
 }
+const tileP = new Promise(res => { const i = new Image(); i.onload = () => res(i); i.onerror = () => res(null); i.src = 'assets/brand/patron-tile.svg'; });
+let TILE = null; tileP.then(i => { TILE = i; });
+function pattern(ctx, w, h, alpha = .5, scale = .8) {
+  if (!TILE) return; const p = ctx.createPattern(TILE, 'repeat'); p.setTransform(new DOMMatrix().scale(scale));
+  ctx.save(); ctx.globalAlpha = alpha; ctx.fillStyle = p; ctx.fillRect(0, 0, w, h); ctx.restore();
+}
 function iso(ctx, x, y, w, color) { ctx.save(); ctx.translate(x, y); ctx.scale(w / 1000, w / 1000); ctx.fillStyle = color; ctx.fill(isoPath); ctx.restore(); }
 function wrap(ctx, text, maxW) {
   const out = []; String(text).split('\n').forEach(par => { let line = '';
@@ -189,6 +195,9 @@ const TPL = {
   cita: {name: 'Cita', w: 1080, h: 1350, photo: false, title: 'Tu esencia no necesita artificios. Su fuerza está en ser auténtica.', sub: 'Nairym Sosa · Máster Nail Artist',
     draw(ctx, d) {
       ctx.fillStyle = C.profundo; ctx.fillRect(0, 0, 1080, 1350);
+      pattern(ctx, 1080, 1350, .55);
+      const v = ctx.createRadialGradient(540, 700, 120, 540, 700, 640); v.addColorStop(0, 'rgba(40,50,28,.96)'); v.addColorStop(1, 'rgba(40,50,28,.25)');
+      ctx.fillStyle = v; ctx.fillRect(0, 0, 1080, 1350);
       const g = ctx.createRadialGradient(880, 180, 0, 880, 180, 620); g.addColorStop(0, 'rgba(182,154,232,.22)'); g.addColorStop(1, 'rgba(182,154,232,0)');
       ctx.fillStyle = g; ctx.fillRect(0, 0, 1080, 1350);
       iso(ctx, 440, 190, 200, C.marfil);
@@ -210,6 +219,9 @@ const TPL = {
   serie: {name: 'Serie', w: 1080, h: 1350, photo: 'tools', title: 'Nairym explica', sub: '[Tema del episodio]',
     draw(ctx, d, img) {
       ctx.fillStyle = C.profundo; ctx.fillRect(0, 0, 1080, 1350);
+      pattern(ctx, 1080, 760, .45);
+      const v = ctx.createLinearGradient(0, 0, 0, 760); v.addColorStop(0, 'rgba(40,50,28,.1)'); v.addColorStop(.35, 'rgba(40,50,28,.85)'); v.addColorStop(.75, 'rgba(40,50,28,.85)'); v.addColorStop(1, 'rgba(40,50,28,.3)');
+      ctx.fillStyle = v; ctx.fillRect(0, 0, 1080, 760);
       ctx.save(); ctx.globalAlpha = .55; cover(ctx, img, 0, 760, 1080, 590); ctx.restore();
       const g = ctx.createLinearGradient(0, 760, 0, 1350); g.addColorStop(0, C.profundo); g.addColorStop(1, 'rgba(40,50,28,.2)');
       ctx.fillStyle = g; ctx.fillRect(0, 760, 1080, 590);
@@ -250,7 +262,7 @@ const fontsReady = Promise.all([
   'italic 400 80px "Cormorant Garamond"', '500 80px "Cormorant Garamond"', '200 24px Sora', '300 24px Sora', '400 24px Sora', '400 36px Manrope'
 ].map(f => document.fonts.load(f).catch(() => {}))).then(() => document.fonts.ready);
 async function render(canvas, key, d, scale = 1) {
-  const t = TPL[key]; await fontsReady;
+  const t = TPL[key]; await fontsReady; await tileP;
   const img = t.photo !== false ? await loadImg(d.photo || t.photo) : null;
   canvas.width = t.w * scale; canvas.height = t.h * scale;
   const ctx = canvas.getContext('2d'); ctx.setTransform(scale, 0, 0, scale, 0, 0);
